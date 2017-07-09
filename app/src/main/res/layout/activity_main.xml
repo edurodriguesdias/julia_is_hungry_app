@@ -1,10 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="10dpi"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="stringdevelopment.com.br.ju_app.MainActivity">
 
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/lblScore"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Score : 300 pts"
+            android:textSize="18sp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"/>
+
+        <FrameLayout
+            android:id="@+id/framLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/lblStart"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="Toque para começar"
+                    android:textSize="30sp"
+                    android:layout_marginTop="150dp"/>
+                
+                <ImageView
+                    android:id="@+id/box"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/box"
+                    android:layout_gravity="center_vertical"/>
+
+                <ImageView
+                    android:id="@+id/orange"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/orange" />
+
+                <ImageView
+                    android:id="@+id/black"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/black" />
+
+                <ImageView
+                    android:id="@+id/pink"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/pink" />
+
+        </FrameLayout>
+
+
+
+</LinearLayout>
