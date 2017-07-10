@@ -80,22 +80,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean onTouchEvent(MotionEvent me){
-        timer.schedule(new TimerTask() {
-                           @Override
-                           public void run() {
-                               handler.post(new Runnable() {
-                                   @Override
-                                   public void run() {
-                                       changePos();
-                                   }
-                               });
-                           }
-                       },0,20
-        );
+
 
 
         if(start_flg == false){
             start_flg = true;
+
+            lblStart.setVisibility(View.GONE);
+
+            timer.schedule(new TimerTask() {
+                               @Override
+                               public void run() {
+                                   handler.post(new Runnable() {
+                                       @Override
+                                       public void run() {
+                                           changePos();
+                                       }
+                                   });
+                               }
+                           },0,20
+            );
+
+
 
             FrameLayout frame = (FrameLayout) findViewById(R.id.framLayout);
             frameHeight = frame.getHeight();
@@ -104,8 +110,6 @@ public class MainActivity extends AppCompatActivity {
 
             boxSize = box.getHeight();
 
-
-            lblStart.setVisibility(View.GONE);
 
         }else{
 
